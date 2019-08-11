@@ -21,6 +21,22 @@ class HomeController extends Controller {
       detail
     });
   }
+
+  async test() {
+    // 测试application拓展
+    console.log(this.app.foo("application"));
+
+    // 测试context拓展
+    console.log(this.ctx.foo("context"));
+
+    // 测试request拓展
+    console.log(this.ctx.request.foox);
+
+    // 测试response拓展
+    console.log(this.ctx.response.foo = "response");
+
+    this.ctx.body = "<h1>test page</h1>";
+  }
 }
 
 module.exports = HomeController;
