@@ -16,7 +16,7 @@ module.exports = appInfo => {
   config.keys = appInfo.name + '_1565449688328_3126';
 
   // add your middleware config here
-  config.middleware = [];
+  config.middleware = ['forbidIp', 'auth'];
 
   // add your user config here
   const userConfig = {
