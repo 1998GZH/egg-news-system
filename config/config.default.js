@@ -31,7 +31,12 @@ module.exports = appInfo => {
   }
 
   config.newsUrl = 'https://news-at.zhihu.com/api/4/news/latest';
-  config.newsDetail = 'https://news-at.zhihu.com/api/4/news/'
+  config.newsDetail = 'https://news-at.zhihu.com/api/4/news/';
+
+  config.session = {
+    key: "GZH_SESS",
+    maxAge: 0, //浏览器关闭时清除
+  }
 
   return {
     ...config,

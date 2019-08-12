@@ -1,3 +1,4 @@
+// middleware需要在config.default.js中进行配置
 module.exports = function(options, app) {
   return async (ctx, next) => {
     let host = ctx.request.header.host;

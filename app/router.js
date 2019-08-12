@@ -12,4 +12,9 @@ module.exports = app => {
 
   router.get('/login', controller.login.login);
   router.post('/login', controller.login.handleLogin);
+
+  // 设置cookie测试页面
+  router.get('/setcookie', controller.setcookie.setCookie);
+  router.get('/getcookie', controller.setcookie.getCookie);
+  router.get('/deletecookie', controller.setcookie.deleteCookie);
 };

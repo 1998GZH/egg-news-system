@@ -8,6 +8,10 @@
   <link rel="stylesheet" href="/public/css/newsList.css">
 </head>
 <body>
+  <% if(userInfo.avatar && userInfo.username) { %>
+    <img src="<%= userInfo.avatar %>" alt="">
+    <p><%= userInfo.username %></p>
+  <% } %>
   <h1>新闻首页 -- <%= helper.formatDate(newsList.date) %></h1>
   <hr>
   <h2>latest5</h2>

@@ -5,10 +5,11 @@ const Controller = require('egg').Controller;
 class HomeController extends Controller {
   async index() {
     const { ctx } = this;
-    
+    let session = ctx.session.userInfo || {};
     let newsList = await this.service.news.getNewsLatest();
     await ctx.render('index.ejs', {
-      newsList
+      newsList,
+      userInfo: session
     });
   }
 
